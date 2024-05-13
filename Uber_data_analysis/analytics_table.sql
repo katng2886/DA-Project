@@ -20,32 +20,32 @@ CREATE OR REPLACE TABLE `hopeful-text-419519.uber_data_engineering.analytics_tab
 
   FROM
 
-  `hopeful-text-419519.uber_data_engineering.fact_table` f
+  `datasetid.dataname.fact_table` f
   JOIN 
-  `hopeful-text-419519.uber_data_engineering.datetime_dim` d
+  `datasetid.dataname.datetime_dim` d
   ON (f.datetime_id = d.datetime_id)
 
   JOIN 
-  `hopeful-text-419519.uber_data_engineering.passenger_count_dim` p
+  `datasetid.dataname.passenger_count_dim` p
   ON (f.passenger_count_id = p.passenger_count_id)
 
   JOIN 
-  `hopeful-text-419519.uber_data_engineering.trip_distance_dim` t
+  `datasetid.dataname.trip_distance_dim` t
   ON (t.trip_distance_id = f.trip_distance_id)
 
   JOIN 
-  `hopeful-text-419519.uber_data_engineering.pickup_location_dim` pu
+  `datasetid.dataname.pickup_location_dim` pu
   ON (f.pickup_location_id = pu.pickup_location_id)
 
   JOIN 
-  `hopeful-text-419519.uber_data_engineering.dropoff_location_dim` drp
+  `datasetid.dataname.dropoff_location_dim` drp
   ON (drp.dropoff_location_id = f.dropoff_location_id)
 
   JOIN 
-  `hopeful-text-419519.uber_data_engineering.rate_code_dim` r
+  `datasetid.dataname.rate_code_dim` r
   ON (r.rate_code_id = f.rate_code_id)
 
-  JOIN `hopeful-text-419519.uber_data_engineering.payment_type_dim` pt
+  JOIN `datasetid.dataname.payment_type_dim` pt
   ON (pt.payment_type_id = f.payment_type_id)
 
 );
