@@ -1,0 +1,31 @@
+1. Fact table: 
+- Contains quantitative measures or metrics that are used for analysis
+- Typically contain FK -> link to dimension table
+- Contains columns that have high cardinality and change frequently
+- Contains columns that are not used for analysis by themselves, but are necessary for calculating metrics
+
+2. Dimension table: 
+- COntains columns that describe attributes of data being analyzed. 
+- Typically contains PK -> link to fact table
+- Contains columns that have low cardinality and DON'T change frequently
+- COntains columns that can be used for groupong or filtering data for analysis
+
+#checking python version -> 
+#checking pip version -> py -m pip --version
+#upgrade pip setuptools wheel -> py -m pip install --upgrade pip setuptools wheel
+#install jupyterlab -> py -m pip install jupyterlab
+#install jupyter notebook -> py -m pip install notebook
+
+#command for setting up the VM
+- After creating VM instance: 
+- Command code: 
+1. sudo apt-get update -y # update python3
+2. sudo apt-get install python3-distutils  
+3. sudo apt-get install python3-apt #install python3
+4. sudo apt-get install wget 
+wget https://bootstrap.pypa.pa.io/get-pip.py
+5. sudo python3 get-pip.py
+
+- Install Mage Ai
+6. pip install mage-ai
+- start Mage project (pipeline): 
