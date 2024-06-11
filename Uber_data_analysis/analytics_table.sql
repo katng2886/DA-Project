@@ -1,5 +1,5 @@
 -- JOIN tables 
-CREATE OR REPLACE TABLE `hopeful-text-419519.uber_data_engineering.analytics_table` AS(
+CREATE OR REPLACE TABLE `{project_name}.uber_data_engineering.analytics_table` AS(
   SELECT 
   f. VendorID, 
   d.tpep_dropoff_datetime,
